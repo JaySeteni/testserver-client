@@ -1,9 +1,16 @@
 <app-navigation></app-navigation>
-<p>dashboard works!</p>
 
 <div class="grid">
     <div class="grid g1">user</div>
     <div class="grid g2">email</div>
     <div class="grid g3">role</div>
 </div>
-<div class="empty">empty</div>
+
+ <div class="empty">
+  <ul>
+    <li *ngFor="let user of allUser">
+      <p>{{user.email}}</p>
+      <p>{{user.password}}</p>
+    </li>
+  </ul>
+</div>

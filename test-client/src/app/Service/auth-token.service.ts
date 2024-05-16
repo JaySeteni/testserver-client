@@ -5,9 +5,9 @@ import { Observable } from 'rxjs';
 @Injectable({
   providedIn: 'root'
 })
-export class MasterService {
+export class AuthService {
 
-  private baseUrl = 'http://your-backend-url/api';
+  private baseUrl = 'http://localhost:3000/v1/auth';
 
   constructor(private http: HttpClient) { }
 
