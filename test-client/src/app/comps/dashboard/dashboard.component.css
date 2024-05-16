@@ -1,0 +1,16 @@
+.grid{
+    color: rgb(49, 49, 48);
+    font-weight: bolder;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    justify-content: space-around;
+    justify-items: center;
+    border-bottom: 2px solid greenyellow;
+    /* background-color: green; */
+    border-right: 2px solid lightblue;
+}
+.empty{
+    height:80vh;
+    background-color: grey;
+}

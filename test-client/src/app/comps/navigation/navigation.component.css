@@ -1,10 +1,20 @@
 ul{
     display: flex;
-    padding: 10px;
+    padding: 5px;
+    justify-content: space-around;
+    background-color: orange;
 }
 li{
     padding: 10px;
+    list-style-type: none;
+    text-transform: uppercase;
 }
 
+ul li a{
+    text-decoration: none;
+    color: rgb(41, 40, 40);
+    font-weight: bold;
+
+}
 @media screen and (min-width: 650px) {
 }
