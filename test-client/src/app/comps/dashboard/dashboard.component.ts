@@ -9,12 +9,14 @@ import { MasterService } from '../../Service/master-service.service';
 })
 export class DashboardComponent implements OnInit {
   allUser :any = []
+  user : any = []
 
   constructor(private masterServer: MasterService){}
 
   ngOnInit(): void {
       this.getUsers()
       this.getUsersP()
+      this. getOneUser()
   }
 
   getUsers(){
@@ -32,6 +34,17 @@ export class DashboardComponent implements OnInit {
   getUsersP(){
     this.masterServer.getAllUsersP().subscribe({
       next: data =>{
+        console.log(data)
+      },
+      error: err=>{
+        console.log(err)
+      }
+    })
+  }
+  getOneUser(){
+    this.masterServer.getOneUser().subscribe({
+      next: data =>{
+        this.user = data.user
         console.log(data)
       },
       error: err=>{

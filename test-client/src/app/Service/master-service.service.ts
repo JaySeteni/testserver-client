@@ -8,19 +8,9 @@ import { HttpClient } from '@angular/common/http';
 })
 
 export class MasterService {
-  private apiUrl = "http://localhost:3000/v1/users/";
+  private apiUrl = "http://localhost:3000/v1/users";
 
   constructor(private http : HttpClient){}
-  // private httpLink = {
-  //   getAllUsers: `${this.apiUrl}/user/all`,
-  //   getOneUser: `${this.apiUrl}/user`,
-  //   getUsersWithLongPasswords: `${this.apiUrl}/user/long-passwords`,
-  //   updateUser: (id: string) => `${this.apiUrl}/user/${id}`,
-  //   getUserDashboard: `${this.apiUrl}/user`,
-  //   getAdminDashboard: `${this.apiUrl}/admin`,
-  //   deleteUserById: (id: string) => `${this.apiUrl}/users/${id}`,
-  //   deleteAllUsers: `${this.apiUrl}/users`
-  // };
 
   getAllUsers():Observable<any>{
     return this.http.get(this.apiUrl+"all")
@@ -29,5 +19,27 @@ export class MasterService {
     return this.http.get(this.apiUrl+"long-passwords")
   }
 
+  getOneUser():Observable<any>{
+    return this.http.get(this.apiUrl+"user")
+  }
 
+  updateUser(id:any):Observable<any>{
+    return this.http.get(this.apiUrl+"user/" + id)
+  }
+
+  getUserDashboard():Observable<any>{
+    return this.http.get(this.apiUrl+"user")
+  }
+
+  getAdminDashboard():Observable<any>{
+    return this.http.get(this.apiUrl+"admin")
+  }
+
+  deleteUserById(id:any):Observable<any>{
+    return this.http.delete(this.apiUrl+"user/" + id)
+  }
+
+  deleteAllUsers():Observable<any>{
+    return this.http.delete(this.apiUrl+"users")
+  }
 }

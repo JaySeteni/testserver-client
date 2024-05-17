@@ -14,7 +14,7 @@ import { UserComponent } from './comps/user/user.component';
 import { NavigationComponent } from './comps/navigation/navigation.component';
 import { AuthorizationComponent } from './comps/authorization/authorization.component';
 
-import { AuthInterceptor } from './Interface/http-interceptors';
+import { AuthInterceptor } from './Service/http-interceptors';
 
 @NgModule({
   declarations: [
