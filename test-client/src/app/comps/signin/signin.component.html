@@ -1,22 +1,26 @@
 <app-navigation></app-navigation>
 
-<form  action="./success.html"
-method="POST" >
-    <div class="flex1">
-        <div class="formRow four">
-            <div class="inputData">
-                <input type="email" name="email" class="email" placeholder="Email Address:" required/><br/>
+<div class="formCont">
+    <h2>User form</h2>
+    <form >
+        <div class="flex1">
+            <div class="formGroup one">
+                <div class="inputData">
+                    <label for="email">Email: </label>
+                    <input type="email" name="email" class="formControl" placeholder="Email Address:" required/><br/>
+                </div>
             </div>
-        </div>
-        <div class="formRow one">
-            <div class="inputData">
-                <input type="password" name="password" class="fullName" required placeholder="password" required/>
+            <div class="formGroup two">
+                <div class="inputData">
+                    <label for="password">Password: </label>
+                    <input type="password" name="password" class="formControl" required placeholder="password" required/>
+                </div>
             </div>
+
         </div>
 
-    </div>
-    
-    <div class="d-flex justify-content-center py-5 border-primary" >            
-        <input type="submit" class="submit"  value="accept">
-    </div>
-</form>
+        <div class="d-flex justify-content-center py-5 border-primary" >            
+            <input type="submit" class="submit"  value="Login">
+        </div>
+    </form>
+</div>
