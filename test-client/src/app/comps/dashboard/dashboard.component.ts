@@ -10,7 +10,7 @@ import { MasterService } from '../../Service/master-service.service';
 export class DashboardComponent implements OnInit {
   allUser :any = []
   user : any = []
-
+ 
   constructor(private masterServer: MasterService){}
 
   ngOnInit(): void {
